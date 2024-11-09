@@ -1,0 +1,141 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f8fb;
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.tab-link {
+    background-color: transparent;
+    color: #555;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.tab-link:hover {
+    color: #ff6f61;
+    transform: translateY(-3px);
+}
+
+.tab-link.active {
+    color: #ff6f61;
+    border-bottom: 3px solid #ff6f61;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.reaction-image {
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.reaction-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #ff6f61;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Animation for main content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
