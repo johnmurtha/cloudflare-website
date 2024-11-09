@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     // Function to show the selected tab content and hide others
     function showTab(tabId) {
         // Deactivate all tabs and hide all content sections
@@ -12,12 +12,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Activate the selected tab and show its content
-        document.querySelector(`.tab-link[onclick="showTab('${tabId}')"]`).classList.add("active");
+        const activeTab = document.querySelector(`.tab-link[data-tab="${tabId}"]`);
+        if (activeTab) {
+            activeTab.classList.add("active");
+        }
+
         const activeContent = document.getElementById(tabId);
-        activeContent.classList.add("active");
-        activeContent.style.display = "block";
+        if (activeContent) {
+            activeContent.classList.add("active");
+            activeContent.style.display = "block";
+        }
     }
 
     // Initialize by showing the "about" tab content by default
     showTab("about");
+
+    // Attach event listeners for the tab buttons
+    const tabButtons = document.querySelectorAll(".tab-link");
+    tabButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const tabId = button.getAttribute("data-tab");
+            showTab(tabId);
+        });
+    });
 });
