@@ -3,34 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David's Peanut Butter Allergy</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Open Graph Meta Tags for Link Preview -->
-    <meta property="og:title" content="David's Peanut Butter Allergy">
-    <meta property="og:description" content="Discover comprehensive information about peanut butter allergies, including symptoms, causes, treatment, and prevention methods. Stay informed to keep David safe.">
-    <meta property="og:image" content="https://example.com/path-to-your-image.jpg">
-    <meta property="og:url" content="https://your-website.com">
+    <title>David's Peanut Butter Allergy Field Guide</title>
+    <meta name="description" content="A practical, friendly guide to peanut butter allergy: symptoms, emergency steps, cross-contact, label reading, safe swaps, and how to help David.">
+    <meta property="og:title" content="David's Peanut Butter Allergy Field Guide">
+    <meta property="og:description" content="Peanut butter allergy facts, emergency steps, safe swaps, and a quick label-reading guide.">
     <meta property="og:type" content="website">
+    <meta name="theme-color" content="#15171f">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>David's Peanut Butter Allergy</h1>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav" aria-label="Main navigation">
+            <a class="brand" href="#top" aria-label="David's peanut butter allergy guide">
+                <span class="brand-mark" aria-hidden="true">PB</span>
+                <span>David's Allergy Guide</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Menu</span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="#profile">Profile</a>
+                <a href="#symptoms">Symptoms</a>
+                <a href="#emergency">Emergency</a>
+                <a href="#avoid">Avoid</a>
+                <a href="#sources">Sources</a>
+            </div>
+        </nav>
     </header>
 
-    <div class="tabs">
-        <button class="tab-link active" onclick="showTab('about')">About</button>
-        <button class="tab-link" onclick="showTab('symptoms')">Symptoms</button>
-        <button class="tab-link" onclick="showTab('treatment')">Treatment</button>
-        <button class="tab-link" onclick="showTab('prevention')">Prevention</button>
-        <button class="tab-link" onclick="showTab('images')">Images</button>
-    </div>
+    <main id="main">
+        <section class="hero" id="top">
+            <div class="hero-copy">
+                <p class="eyebrow">The friendship-safe food briefing</p>
+                <h1>Peanut butter is the problem. Guessing is not the plan.</h1>
+                <p class="hero-text">
+                    This site is a practical guide for keeping David away from peanut butter,
+                    spotting a reaction fast, reading labels with confidence, and not turning
+                    snack time into a medical mystery.
+                </p>
+                <div class="hero-actions" aria-label="Quick links">
+                    <a class="button primary" href="#emergency">Emergency steps</a>
+                    <a class="button secondary" href="#avoid">What to avoid</a>
+                </div>
+            </div>
 
-    <main>
-        <!-- Content remains the same as before -->
+            <div class="hero-visual" aria-label="Peanut butter allergy warning illustration">
+                <div class="jar-scene">
+                    <svg viewBox="0 0 360 420" role="img" aria-labelledby="jar-title jar-desc">
+                        <title id="jar-title">Peanut butter jar with warning label</title>
+                        <desc id="jar-desc">A stylized peanut butter jar marked as not for David, with alert icons around it.</desc>
+                        <defs>
+                            <linearGradient id="labelGradient" x1="0" x2="1" y1="0" y2="1">
+                                <stop stop-color="#2fd3c6" offset="0"/>
+                                <stop stop-color="#f9c74f" offset="1"/>
+                            </linearGradient>
+                        </defs>
+                        <rect x="118" y="36" width="124" height="42" rx="8" fill="#f9c74f"/>
+                        <rect x="100" y="76" width="160" height="264" rx="24" fill="#f28f3b"/>
+                        <rect x="114" y="98" width="132" height="218" rx="18" fill="#b56732" opacity="0.35"/>
+                        <rect x="82" y="150" width="196" height="102" rx="12" fill="url(#labelGradient)"/>
+                        <path d="M180 165 L233 236 H127 Z" fill="#15171f"/>
+                        <rect x="174" y="185" width="12" height="28" rx="5" fill="#ffffff"/>
+                        <circle cx="180" cy="224" r="6" fill="#ffffff"/>
+                        <text x="180" y="279" text-anchor="middle" fill="#ffffff" font-size="24" font-family="Arial, sans-serif" font-weight="700">NO PB</text>
+                        <circle cx="62" cy="104" r="24" fill="#e85d75"/>
+                        <path d="M52 104 h20 M62 94 v20" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+                        <circle cx="296" cy="110" r="26" fill="#43aa8b"/>
+                        <path d="M285 110 l8 9 l16 -20" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="72" cy="314" r="18" fill="#277da1"/>
+                        <circle cx="300" cy="303" r="20" fill="#f94144"/>
+                        <path d="M290 293 l20 20 M310 293 l-20 20" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="quick-card">
+                    <span class="quick-card-label">First rule</span>
+                    <strong>When in doubt, skip the bite.</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="alert-strip" id="profile">
+            <div>
+                <span class="section-kicker">David's profile</span>
+                <h2>Peanut butter allergy, with a key caveat.</h2>
+            </div>
+            <p>
+                Peanut butter is made from peanuts, so a true peanut butter allergy usually
+                means the immune system is reacting to peanut proteins. If David can truly eat
+                whole peanuts but reacts to peanut butter, an allergist should help sort out
+                whether the trigger is dose, processing, cross-contact, an added ingredient,
+                or something that is not an IgE-mediated allergy.
+            </p>
+        </section>
+
+        <section class="content-band">
+            <div class="section-heading">
+                <span class="section-kicker">Fast facts</span>
+                <h2>What friends should know</h2>
+            </div>
+            <div class="fact-grid">
+                <article class="fact-card">
+                    <span class="fact-number">01</span>
+                    <h3>Reactions can escalate</h3>
+                    <p>A previous mild reaction does not guarantee the next one will be mild. Treat symptoms seriously and follow the emergency plan.</p>
+                </article>
+                <article class="fact-card">
+                    <span class="fact-number">02</span>
+                    <h3>Cross-contact matters</h3>
+                    <p>Shared knives, blenders, pans, bakery cases, candy bins, and sauces can move peanut butter into food that looks safe.</p>
+                </article>
+                <article class="fact-card">
+                    <span class="fact-number">03</span>
+                    <h3>Epinephrine is for emergencies</h3>
+                    <p>For anaphylaxis, epinephrine is first-line treatment. Antihistamines may help some skin symptoms, but they do not replace epinephrine.</p>
+                </article>
+                <article class="fact-card">
+                    <span class="fact-number">04</span>
+                    <h3>Labels beat vibes</h3>
+                    <p>Packaged foods in the U.S. must identify peanut when it is a major allergen ingredient, but restaurant and unpackaged foods require direct questions.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="split-section" id="symptoms">
+            <div class="section-heading sticky-heading">
+                <span class="section-kicker">Symptoms</span>
+                <h2>Watch the whole body, not one symptom.</h2>
+                <p>Food allergy symptoms often show up quickly, but the pattern can vary. Use this as a recognition guide, not a diagnosis tool.</p>
+            </div>
+            <div class="symptom-board">
+                <button class="symptom-tile active" type="button" data-panel="skin">
+                    <span>Skin</span>
+                    <strong>Hives, redness, swelling, itching</strong>
+                </button>
+                <button class="symptom-tile" type="button" data-panel="mouth">
+                    <span>Mouth and throat</span>
+                    <strong>Tingling, throat tightness, lip or tongue swelling</strong>
+                </button>
+                <button class="symptom-tile" type="button" data-panel="breathing">
+                    <span>Breathing</span>
+                    <strong>Wheezing, shortness of breath, coughing</strong>
+                </button>
+                <button class="symptom-tile" type="button" data-panel="stomach">
+                    <span>Stomach</span>
+                    <strong>Nausea, cramps, vomiting, diarrhea</strong>
+                </button>
+                <button class="symptom-tile" type="button" data-panel="danger">
+                    <span>Danger signs</span>
+                    <strong>Dizziness, fainting, severe breathing trouble</strong>
+                </button>
+                <div class="symptom-detail" aria-live="polite">
+                    <h3 id="symptom-title">Skin symptoms</h3>
+                    <p id="symptom-copy">Skin symptoms can be the first clue: hives, flushing, swelling, or intense itching. Watch for symptoms in another body system too.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="emergency-section" id="emergency">
+            <div class="section-heading">
+                <span class="section-kicker">Emergency mode</span>
+                <h2>If a serious reaction is suspected</h2>
+                <p>This is awareness information. David's personal action plan from a clinician should always win.</p>
+            </div>
+            <ol class="steps">
+                <li>
+                    <span>1</span>
+                    <div>
+                        <h3>Use epinephrine if prescribed and indicated.</h3>
+                        <p>Do not wait for symptoms to become dramatic if the action plan says to use it.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>2</span>
+                    <div>
+                        <h3>Call 911.</h3>
+                        <p>Anaphylaxis can return or progress, so emergency medical care matters even after epinephrine.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>3</span>
+                    <div>
+                        <h3>Keep the package and note the time.</h3>
+                        <p>Save the food wrapper, ingredient list, and timing of symptoms for clinicians.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>4</span>
+                    <div>
+                        <h3>Do not make David walk it off.</h3>
+                        <p>Stay with him, keep him calm, and follow dispatcher or clinician instructions.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="content-band" id="avoid">
+            <div class="section-heading">
+                <span class="section-kicker">Avoidance</span>
+                <h2>Peanut butter can hide in normal-looking food.</h2>
+            </div>
+            <div class="avoid-layout">
+                <article class="scan-panel">
+                    <h3>Label scan checklist</h3>
+                    <div class="checklist">
+                        <label><input type="checkbox"> Ingredient list says peanut, peanut butter, peanut flour, peanut protein, ground nuts, or mixed nuts</label>
+                        <label><input type="checkbox"> Contains statement lists peanut</label>
+                        <label><input type="checkbox"> Advisory note mentions peanut equipment or facility</label>
+                        <label><input type="checkbox"> Restaurant cannot confirm ingredients or shared equipment</label>
+                        <label><input type="checkbox"> Someone used the same knife, spoon, blender, pan, or cutting board</label>
+                    </div>
+                    <p class="scan-result" aria-live="polite">Check any risk you find.</p>
+                </article>
+                <div class="ingredient-cloud" aria-label="Common places peanut butter can appear">
+                    <button type="button" data-tip="Candy and chocolate often share equipment or contain fillings.">Candy</button>
+                    <button type="button" data-tip="Smoothie bars may use shared blenders for peanut butter drinks.">Smoothies</button>
+                    <button type="button" data-tip="Sauces like satay, mole, chili sauce, and marinades can contain peanut.">Sauces</button>
+                    <button type="button" data-tip="Cookies, brownies, pies, and bakery cases are high cross-contact zones.">Baked goods</button>
+                    <button type="button" data-tip="Granola, trail mix, and protein bars may include peanut or shared equipment.">Snack bars</button>
+                    <button type="button" data-tip="Thai, Chinese, Indian, Indonesian, Vietnamese, African, and Mexican dishes can use peanut in sauces or garnishes.">Restaurants</button>
+                    <button type="button" data-tip="Ice cream shops often share scoops, bins, toppings, and machines.">Ice cream</button>
+                    <button type="button" data-tip="Sunflower or soy nut butter can still be made on peanut-shared lines.">Butter swaps</button>
+                </div>
+                <p class="tip-box" id="ingredient-tip">Tap a food zone to see why it matters.</p>
+            </div>
+        </section>
+
+        <section class="split-section swaps-section">
+            <div class="section-heading sticky-heading">
+                <span class="section-kicker">Snack diplomacy</span>
+                <h2>Good swaps make everyone less annoying.</h2>
+                <p>Pick alternatives that are clearly labeled and not made on shared peanut equipment when David is eating too.</p>
+            </div>
+            <div class="swap-grid">
+                <article class="swap-card safe">
+                    <h3>Usually easier swaps</h3>
+                    <ul>
+                        <li>Hummus with vegetables or pita</li>
+                        <li>Cream cheese or avocado toast</li>
+                        <li>Plain fruit, cheese, crackers, or pretzels</li>
+                        <li>Clearly labeled peanut-free cookies or snack packs</li>
+                    </ul>
+                </article>
+                <article class="swap-card caution">
+                    <h3>Check extra carefully</h3>
+                    <ul>
+                        <li>Sunflower seed butter and soy nut butter</li>
+                        <li>Chocolate, granola, protein bars, and trail mix</li>
+                        <li>Restaurant sauces, desserts, and fried foods</li>
+                        <li>Bulk bins and bakery display cases</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="myth-section">
+            <div class="section-heading">
+                <span class="section-kicker">Myth check</span>
+                <h2>Click a myth to flip it.</h2>
+            </div>
+            <div class="myth-grid">
+                <button class="myth-card" type="button" data-answer="Not reliable. Allergic reactions can be unpredictable, and a past mild reaction does not rule out a future serious one.">
+                    <span>Myth</span>
+                    <strong>"A little bit is probably fine."</strong>
+                </button>
+                <button class="myth-card" type="button" data-answer="Not enough. Scraping peanut butter off bread, candy, or a utensil can leave peanut protein behind.">
+                    <span>Myth</span>
+                    <strong>"Just scrape it off."</strong>
+                </button>
+                <button class="myth-card" type="button" data-answer="No. Peanuts are legumes, not tree nuts. Some people are allergic to both, but one does not automatically mean the other.">
+                    <span>Myth</span>
+                    <strong>"Peanuts and tree nuts are the same."</strong>
+                </button>
+            </div>
+        </section>
+
+        <section class="sources-section" id="sources">
+            <div class="section-heading">
+                <span class="section-kicker">Sources</span>
+                <h2>Where the medical facts came from</h2>
+            </div>
+            <div class="source-list">
+                <a href="https://www.aaaai.org/tools-for-the-public/conditions-library/allergies/peanut-allergy" target="_blank" rel="noreferrer">AAAAI: Everything You Need to Know About Peanut Allergy</a>
+                <a href="https://www.foodallergy.org/living-food-allergy/food-allergy-essentials/common-allergens/peanut" target="_blank" rel="noreferrer">FARE: Peanut Allergy</a>
+                <a href="https://www.mayoclinic.org/diseases-conditions/peanut-allergy/symptoms-causes/syc-20376175" target="_blank" rel="noreferrer">Mayo Clinic: Peanut Allergy Symptoms and Causes</a>
+                <a href="https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies" target="_blank" rel="noreferrer">FDA: Food Allergies and Labeling</a>
+            </div>
+            <p class="medical-note">
+                This site is for awareness and friend-level preparedness. It is not a diagnosis, treatment plan,
+                or substitute for David's clinician-approved allergy action plan.
+            </p>
+        </section>
     </main>
 
     <footer>
-        &copy; 2024 - Information provided for awareness purposes only. Always consult with a healthcare provider for medical advice.
+        <p>Built for David's friends. Peanut butter stays off the menu.</p>
     </footer>
 
     <script src="script.js"></script>
